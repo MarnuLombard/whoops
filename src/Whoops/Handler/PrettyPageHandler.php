@@ -480,10 +480,11 @@ class PrettyPageHandler extends Handler
      */
     public function getEnvVariables()
     {
-        if( $this->environmentDisplay )
+        if($this->environmentDisplay){
             return $_ENV;
+        }
 
-        return ['PLEASE NOTE' => 'Display of environment variables has been disabled'];
+        return array("PLEASE NOTE" => "Display of environment variables has been disabled");
     }
 
     /**
